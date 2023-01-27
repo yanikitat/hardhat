@@ -126,6 +126,7 @@ import { makeStateTrie } from "./utils/makeStateTrie";
 import { putGenesisBlock } from "./utils/putGenesisBlock";
 import { txMapToArray } from "./utils/txMapToArray";
 import { RandomBufferGenerator } from "./utils/random";
+import { addSystemSmartContracts } from "./utils/addSystemSmartContracts";
 
 type ExecResult = EVMResult["execResult"];
 
@@ -229,6 +230,8 @@ export class HardhatNode extends EventEmitter {
       stateManager = new DefaultStateManager({
         trie: stateTrie,
       });
+
+      await addSystemSmartContracts(stateManager);
 
       const hardhatBlockchain = new HardhatBlockchain(common);
 
