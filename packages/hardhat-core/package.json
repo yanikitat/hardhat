@@ -137,7 +137,7 @@
     "mnemonist": "^0.38.0",
     "mocha": "^10.0.0",
     "p-map": "^4.0.0",
-    "precompiled_smart_contracts": "file:../../../../WebstormProjects/precompiled_smart_contracts",
+    "graphitjs-smartcontracts": "file:../../../../WebstormProjects/precompiled_smart_contracts",
     "qs": "^6.7.0",
     "raw-body": "^2.4.1",
     "resolve": "1.17.0",
