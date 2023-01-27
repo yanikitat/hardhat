@@ -37,6 +37,7 @@ import { randomBytes } from "crypto";
 import debug from "debug";
 import EventEmitter from "events";
 
+import { PRECOMPILED_CONTRACTS as CUSTOM_PRECOMPILED_CONTRACTS } from "precompiled_smart_contracts";
 import * as BigIntUtils from "../../util/bigint";
 import { CompilerInput, CompilerOutput } from "../../../types";
 import { HardforkHistoryConfig } from "../../../types/config";
@@ -265,6 +266,7 @@ export class HardhatNode extends EventEmitter {
       eei,
       allowUnlimitedContractSize,
       common,
+      customPrecompiles: CUSTOM_PRECOMPILED_CONTRACTS,
     });
 
     const vm = await VM.create({
